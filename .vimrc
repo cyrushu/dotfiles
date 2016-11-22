@@ -17,7 +17,9 @@ source ~/.vim/startup/tmux_settings.vim
 "============== keymapping 
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/keymapping.vim
-"==============
+"============== plugins settings
+source ~/.vim/startup/plugin/NERDTree.vim
+
 
 "============== auto reload vimrc
 augroup myvimrc
