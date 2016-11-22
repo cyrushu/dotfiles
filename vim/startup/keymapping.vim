@@ -3,6 +3,10 @@ no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
 no <up> <Nop>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 
 "==============
@@ -34,8 +38,6 @@ map <C-p> :r ~/.vimbuffer<CR>
 
 
 "============== plugins keymapping
-no <C-n> :NERDTree<CR>
-no <C-m> :NERDTreeFromBookmark
 
 
 "============== call functions
