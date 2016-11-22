@@ -32,6 +32,12 @@ nmap <C-c> :.w! ~/.vimbuffer<CR>
 "paste from buffer
 map <C-p> :r ~/.vimbuffer<CR>
 
+
+"============== plugins keymapping
+no <C-n> :NERDTree<CR>
+no <C-m> :NERDTreeFromBookmark
+
+
 "============== call functions
 map <F4> :call TitleDet()<cr>'s
 map <F7> :call AddVimComment()<cr>'s

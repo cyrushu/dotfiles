@@ -1,0 +1,1 @@
+let NERDTreeShowBookmarks=1
