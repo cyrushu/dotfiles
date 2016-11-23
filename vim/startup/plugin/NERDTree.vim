@@ -6,5 +6,5 @@ let NERDTreeCascadeOpenSingleChildDir=0
 
 "============== NERDTree keymapping
 no <C-n> :NERDTree<CR>
-no <C-m> :NERDTreeFromBookmark<Space>
-
+no <C-m> :NERDTreeFromBookmark<space>
+no <CR> <Nop>

@@ -73,6 +73,7 @@ if [ -f ~/.zsh_env ]; then
     . ~/.zsh_env
 fi
 
+# User function key
 cdUndoKey() {
 	popd      > /dev/null
 	zle       reset-prompt
@@ -93,6 +94,9 @@ zle -N                 cdParentKey
 zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
 bindkey '^[[1;3D'      cdUndoKey
+
+# disable ctrl+s to freeze terminal
+stty -ixon
 
 autoload -U run-help
 autoload run-help-git
