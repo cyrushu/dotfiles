@@ -7,10 +7,12 @@ set incsearch
 set showcmd
 set hls
 set nobackup
-set undofile
 set autoindent
 set smartindent
 syntax on
+
+" set typing rules
+set softtabstop=4
 
 " set temp dir into /.vimtmp
 set bdir-=.
