@@ -11,3 +11,13 @@ set undofile
 set autoindent
 set smartindent
 syntax on
+
+" set temp dir into /.vimtmp
+set bdir-=.
+set bdir+=~/.vimtmp
+
+" set undofile and undodir
+
+set undofile
+set undodir-=.
+set undodir+=~/.vimundo

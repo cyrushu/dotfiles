@@ -15,7 +15,9 @@ nmap no o<ESC>k
 nmap nO O<ESC>j
 nmap <C-Tab> mqI<Tab><ESC>`q
 
-"==============
+"============== Deleting
+nmap <x> "_x
+
 
 "==============
 
