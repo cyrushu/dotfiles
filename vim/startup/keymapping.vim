@@ -1,3 +1,6 @@
+"============== Clearing mapping
+"unmap < <Nop>
+
 "============== Arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -8,7 +11,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
 "============== inserting
 imap <C-CR> <ESC>o
 nmap no o<ESC>k
@@ -16,7 +18,7 @@ nmap nO O<ESC>j
 nmap <C-b> mqI<Tab><ESC>`q
 
 "============== Deleting
-nmap <x> "_x
+nnoremap x "_x
 
 
 "==============
@@ -35,6 +37,10 @@ imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
+vmap [ di[]<ESC>hp
+vmap ' di''<ESC>hp
+vmap " di""<ESC>hp
+vmap < di<><ESC>hp
 
 
 "============== personlaized function

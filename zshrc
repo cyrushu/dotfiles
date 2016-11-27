@@ -90,6 +90,7 @@ cdParentKey() {
 	echo
 }
 
+
 zle -N                 cdParentKey
 zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
