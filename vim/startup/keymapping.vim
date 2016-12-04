@@ -1,6 +1,5 @@
 "============== Clearing mapping
 "unmap < <Nop>
-no <C-d> <Nop>
 
 "============== Arrow keys
 no <down> <Nop>
@@ -35,7 +34,7 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
-"quick pairs
+"============= quick pairs
 imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
@@ -44,6 +43,7 @@ vmap [ di[]<ESC>hp
 vmap ' di''<ESC>hp
 vmap " di""<ESC>hp
 vmap < di<><ESC>hp
+nmap <C-/> I#<ESC>
 
 
 "============== personlaized function

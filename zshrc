@@ -30,6 +30,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
 ZSH_THEME=rkj-repos
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"

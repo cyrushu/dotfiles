@@ -3,8 +3,6 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
-" NERDTree
-" Easy motion
 " powerline
 " fugitive git-plugins
 
