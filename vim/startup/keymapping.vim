@@ -1,5 +1,6 @@
 "============== Clearing mapping
 "unmap < <Nop>
+no <C-d> <Nop>
 
 "============== Arrow keys
 no <down> <Nop>
@@ -21,7 +22,9 @@ nmap <C-b> mqI<Tab><ESC>`q
 nnoremap x "_x
 
 
-"==============
+"============== Leader and leader command
+let mapleader = ","
+nmap <leader>w :w<CR>
 
 "==============
 

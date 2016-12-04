@@ -20,6 +20,7 @@ source ~/.vim/startup/keymapping.vim
 "============== plugins settings
 source ~/.vim/startup/plugin/NERDTree.vim
 source ~/.vim/startup/plugin/vim-expand-region.vim
+source ~/.vim/startup/plugin/vim-multiple-cursors.vim
 
 
 "============== auto reload vimrc
