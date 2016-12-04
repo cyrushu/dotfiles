@@ -3,7 +3,6 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
-" powerline
 " fugitive git-plugins
 
 
@@ -27,4 +26,3 @@ augroup myvimrc
 	au!
 	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
