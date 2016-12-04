@@ -1,7 +1,7 @@
-"Pathogen
+"============= Pathogen
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
+syntax on
 
 " NERDTree
 " Easy motion
