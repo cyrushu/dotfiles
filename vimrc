@@ -19,6 +19,7 @@ source ~/.vim/startup/keymapping.vim
 source ~/.vim/startup/plugin/NERDTree.vim
 source ~/.vim/startup/plugin/vim-expand-region.vim
 source ~/.vim/startup/plugin/vim-multiple-cursors.vim
+source ~/.vim/startup/plugin/vim-powerline.vim
 
 
 "============== auto reload vimrc
