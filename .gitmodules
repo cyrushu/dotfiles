@@ -4,3 +4,18 @@
 [submodule "vim_plugin/YouCompleteMe"]
 	path = vim_plugin/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim_plugin/vim-powerline"]
+	path = vim_plugin/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim_plugin/vim-expand-region"]
+	path = vim_plugin/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "vim_plugin/vim-multiple-cursors"]
+	path = vim_plugin/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "vim_plugin/vim-easymotion"]
+	path = vim_plugin/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "vim_plugin/nerdtree"]
+	path = vim_plugin/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
