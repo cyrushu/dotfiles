@@ -3,6 +3,13 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
+" tarbar
+" taglist
+" ctrlp, file searching
+" rainbow_parentheses
+" UltiSnips
+" delimitMate auto (){}""
+" TaskList
 " fugitive git-plugins
 
 
