@@ -1,3 +1,6 @@
 [submodule "vim_plugin/indentLine"]
 	path = vim_plugin/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "vim_plugin/YouCompleteMe"]
+	path = vim_plugin/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
