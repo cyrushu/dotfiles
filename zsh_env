@@ -1,3 +1,2 @@
 export force_py="/home/yilang/project_script/force/force.py"
-export force_ss_py="/home/yilang/project_script/force/force_ss.py"
 export TERM="xterm-256color"

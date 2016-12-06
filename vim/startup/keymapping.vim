@@ -16,6 +16,7 @@ imap <C-CR> <ESC>o
 nmap no o<ESC>k
 nmap nO O<ESC>j
 nmap <C-b> mqI<Tab><ESC>`q
+vmap <C-b> mqI<Tab><ESC>`q
 
 "============== Deleting
 nnoremap x "_x
