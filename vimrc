@@ -19,6 +19,7 @@ source ~/.vim/startup/plugin/NERDTree.vim
 source ~/.vim/startup/plugin/vim-expand-region.vim
 source ~/.vim/startup/plugin/vim-multiple-cursors.vim
 source ~/.vim/startup/plugin/vim-powerline.vim
+source ~/.vim/startup/plugin/indentLine.vim
 
 
 "============== auto reload vimrc
