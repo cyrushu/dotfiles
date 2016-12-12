@@ -1,4 +1,3 @@
-set number
 set formatoptions-=cro
 set clipboard=unnamed
 set history =50
@@ -10,6 +9,12 @@ set nobackup
 set autoindent
 set smartindent
 syntax on
+
+set wildmenu
+
+" settings on the numbar
+set number
+set relativenumber
 
 " set typing rules
 set softtabstop=4
