@@ -15,8 +15,7 @@ syntax on
 set softtabstop=4
 
 " set temp dir into /.vimtmp
-set bdir-=.
-set bdir+=~/.vimtmp
+set bdir=~/.vimtmp
 
 " set undofile and undodir
 

@@ -1,2 +1,3 @@
 export force_py="/home/yilang/project_script/force/force.py"
+export excute_all_force="/home/yilang/project_script/force/excute_pair_force.sh"
 export TERM="xterm-256color"
