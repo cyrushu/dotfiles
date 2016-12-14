@@ -1,2 +1,2 @@
-# public
-public
+# Dotfiles
+This is personal dotfiles
