@@ -19,3 +19,6 @@
 [submodule "vim_plugin/nerdtree"]
 	path = vim_plugin/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim_plugin/vimtex"]
+	path = vim_plugin/vimtex
+	url = https://github.com/lervag/vimtex.git
