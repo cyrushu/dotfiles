@@ -27,3 +27,5 @@ set bdir=~/.vimtmp
 set undofile
 set undodir-=.
 set undodir+=~/.vimundo
+
+set directory=$HOME/.vimswap

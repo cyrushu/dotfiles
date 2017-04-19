@@ -107,4 +107,9 @@ autoload run-help-svk
 alias help=run-help
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/yilang/scripts/partition_check.sh
+#source /usr/share/autojump/autojump.sh
+
+# latex alias
+#alias pdflatex_protect="pdflatex --enable-write18 -output-directory=./temp -interaction=nonstopmode $1"
+alias pdflatex="pdflatex --enable-write18 -interaction=nonstopmode $1"
+
