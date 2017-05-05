@@ -69,7 +69,7 @@ mute=Volume Mute,Volume Mute,Mute
 
 [krunner]
 _k_friendly_name=Run Command
-run command=\tAlt+F2,Alt+Space,Run Command
+run command=\tF4,Alt+Space,Run Command
 run command on clipboard contents=none,Alt+Shift+F2,Run Command on clipboard contents
 
 [ksmserver]

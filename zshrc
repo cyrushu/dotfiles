@@ -67,7 +67,7 @@ fi
 
 # User configuration
 
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:/home/yilang/Dropbox/dotfiles/virtualbox/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 if [ -f ~/.zsh_env ]; then
@@ -108,8 +108,4 @@ alias help=run-help
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/share/autojump/autojump.sh
-
-# latex alias
-#alias pdflatex_protect="pdflatex --enable-write18 -output-directory=./temp -interaction=nonstopmode $1"
-alias pdflatex="pdflatex --enable-write18 -interaction=nonstopmode $1"
 
