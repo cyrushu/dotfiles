@@ -22,3 +22,6 @@
 [submodule "vim_plugin/vimtex"]
 	path = vim_plugin/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
