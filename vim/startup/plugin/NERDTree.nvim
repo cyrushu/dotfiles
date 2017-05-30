@@ -1,0 +1,4 @@
+"============== NERDTree keymapping
+no <C-\> :NERDTree<CR>
+no <C-m> :NERDTreeFromBookmark<space>
+no <CR> <Nop>
