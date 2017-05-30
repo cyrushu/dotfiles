@@ -1,4 +1,4 @@
-" vim ctrl in tmax
+" vim ctrl in tmux
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on"
         execute "set <xUp>=\e[1;*A"

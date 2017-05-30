@@ -1,6 +1,20 @@
-export force_py="/home/yilang/project_script/force/force.py"
-export excute_all_force="/home/yilang/project_script/force/excute_pair_force.sh"
+export force_py="/home/yilang/project_script/force_prism_thesis/force.py"
+export excute_all_force="/home/yilang/project_script/force_prism_thesis/excute_pair_force.sh"
 export TERM="xterm-256color"
-export PYTHONPATH="${PYTHONPATH}:$HOME/software/source_code/oxdna-code/oxDNA/UTILS"
+export PYTHONPATH="${PYTHONPATH}:$HOME/software/source_code/oxdna-code/oxDNA/UTILS:$HOME/project_script/pyplot"
 export oxdnadir="/home/yilang/software/source_code/oxdna-code/oxDNA/UTILS"
 export cadnano_interface="$oxdnadir/cadnano_interface.py"
+export experiment_fig="/home/yilang/tex_repo/part2_thesis/Figures/experiment/"
+
+
+# oxDNA visualisations
+export OXDNA_GROOVE=1
+
+
+# added by Anaconda3 4.3.1 installer
+export PATH="$PATH:/home/yilang/anaconda3/bin"
+
+# python scripts
+export findmismatch="$HOME/project_script/data_manage/find_mismatch_multiprocess.py"
+export filterdata="$HOME/project_script/data_manage/filter_data_mult.py"
+export conf2angle="$HOME/switch/script/switch_angle/measure_angle.py"
