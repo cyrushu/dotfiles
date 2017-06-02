@@ -26,7 +26,10 @@ nnoremap x "_x
 let mapleader = ","
 nmap <leader>w :w<CR>
 
-"==============
+"============== Buffers
+nnoremap <F10> :buffers<CR>
+
+
 
 "============== always centered
 nmap G Gzz

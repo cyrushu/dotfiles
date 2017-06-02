@@ -18,3 +18,7 @@ export PATH="$PATH:/home/yilang/anaconda3/bin"
 export findmismatch="$HOME/project_script/data_manage/find_mismatch_multiprocess.py"
 export filterdata="$HOME/project_script/data_manage/filter_data_mult.py"
 export conf2angle="$HOME/switch/script/switch_angle/measure_angle.py"
+
+# vim shortcuts
+export vimrc="$HOME/.vimrc"
+export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"

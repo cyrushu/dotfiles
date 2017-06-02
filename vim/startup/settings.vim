@@ -9,7 +9,7 @@ set nobackup
 set autoindent
 set smartindent
 syntax on
-
+set encoding=utf8
 set wildmenu
 
 " settings on the numbar

@@ -3,7 +3,10 @@ set history=100
 set ruler
 set showcmd
 syntax on
+set wildmode=full
 
+set encoding=utf8
+set clipboard+=unnamedplus
 
 " settings on the numbar
 set number
