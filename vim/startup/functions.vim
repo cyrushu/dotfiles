@@ -1,10 +1,3 @@
-if !exists('*AddVimComment')
-    function AddVimComment()
-	    call append(0,"\"==============")
-	    echohl WarningMsg |echo "Successful in adding vim Comment"| echohl None
-    endf
-endif
-
 if !exists('*AddTitle')
     function AddTitle()
 	    call append(0,"/*=============================================================================")
@@ -35,3 +28,6 @@ if !exists('*TitleDet')
 	    call AddTitle()
     endfunction
 endif
+
+
+

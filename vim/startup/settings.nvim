@@ -2,7 +2,10 @@
 set history=100
 set ruler
 set showcmd
+
 syntax on
+filetype plugin on
+
 set wildmode=full
 
 set encoding=utf8

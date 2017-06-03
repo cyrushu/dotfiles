@@ -22,3 +22,6 @@ export conf2angle="$HOME/switch/script/switch_angle/measure_angle.py"
 # vim shortcuts
 export vimrc="$HOME/.vimrc"
 export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
+
+# the fuck
+eval $(thefuck --alias f)

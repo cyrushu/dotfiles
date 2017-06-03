@@ -15,7 +15,8 @@ nnoremap <C-H> <C-W><C-H>
 imap <C-CR> <ESC>o
 nmap no o<ESC>k
 nmap nO O<ESC>j
-nmap <C-b> mqI<Tab><ESC>`q
+"nmap <C-b> mqI<Tab><ESC>`q
+no <C-b> <Nop>
 vmap <C-b> mqI<Tab><ESC>`q
 
 "============== Deleting
@@ -27,7 +28,16 @@ let mapleader = ","
 nmap <leader>w :w<CR>
 
 "============== Buffers
-nnoremap <F10> :buffers<CR>
+nnoremap <F10> :buffers<CR>:buffer<Space>
+nnoremap <C-w> :bd<CR>
+nnoremap <A-1> :b1<CR>
+nnoremap <A-2> :b2<CR>
+nnoremap <A-3> :b3<CR>
+nnoremap <A-4> :b4<CR>
+nnoremap <A-5> :b5<CR>
+nnoremap <A-6> :b6<CR>
+nnoremap <A-7> :b7<CR>
+
 
 
 
@@ -59,8 +69,8 @@ map <C-p> :r ~/.vimbuffer<CR>
 
 
 "============== plugins keymapping
-
+source ~/.vim/startup/plugin/BasicKeymapping.vim
 
 "============== call functions
-map <F4> :call TitleDet()<cr>'s
-map <F7> :call AddVimComment()<cr>'s
+nnoremap <F7> O"==============<C-[>
+map <F6> :call TitleDet()<cr>'s

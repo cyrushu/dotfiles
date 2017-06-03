@@ -1,6 +1,6 @@
 call plug#begin('~/.vim_local/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
@@ -14,6 +14,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Utils
 Plug 'bling/vim-airline'
 Plug 'tomtom/tcomment_vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
 
 " Python
 Plug 'python-mode/python-mode'
@@ -52,17 +54,14 @@ elseif !has('nvim')
 endif
 
 
-
+source ~/.vim/startup/CommonSettings.vim
 "============== tmux settings
 source ~/.vim/startup/tmux_settings.vim
 "============== keymapping
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/keymapping.vim
 "============== plugins settings
-source ~/.vim/startup/plugin/Basic.vim
-source ~/.vim/startup/plugin/vim-expand-region.vim
-source ~/.vim/startup/plugin/vim-multiple-cursors.vim
-source ~/.vim/startup/plugin/indentLine.vim
+source ~/.vim/startup/plugin/BasicSettings.vim
 
 
 if has('nvim')
@@ -86,5 +85,5 @@ augroup END
              \   exe "normal! g'\"" |
              \ endif
              " center buffer around cursor when opening files
-  autocmd BufRead * normal zz
+ autocmd BufRead * normal zz
 
