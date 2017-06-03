@@ -108,3 +108,5 @@ alias help=run-help
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/autojump/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

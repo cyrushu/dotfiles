@@ -10,7 +10,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 "============== inserting
 imap <C-CR> <ESC>o
 nmap no o<ESC>k
@@ -43,16 +42,14 @@ nnoremap <A-7> :b7<CR>
 
 "============== always centered
 nmap G Gzz
+nmap L Lzz
+nmap H Hzz
 nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
 
 "============= quick pairs
-imap <leader>' ''<ESC>i
-imap <leader>" ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
 vmap [ di[]<ESC>hp
 vmap ' di''<ESC>hp
 vmap " di""<ESC>hp

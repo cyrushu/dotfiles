@@ -16,6 +16,8 @@ Plug 'bling/vim-airline'
 Plug 'tomtom/tcomment_vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': './install --all' }
 
 " Python
 Plug 'python-mode/python-mode'
@@ -24,7 +26,6 @@ call plug#end()
 
 
 " ====== oldvim plugin
-" vim-powerline
 
 " ========== interesting plugin
 " tarbar
@@ -53,6 +54,13 @@ elseif !has('nvim')
 	source ~/.vim/startup/settings.vim
 endif
 
+"============== Neovim and vim plugin conflict
+if has('nvim')
+	source ~/.vim/startup/plugin/NERDTree.nvim
+elseif !has('nvim')
+	source ~/.vim/startup/plugin/NERDTree.nvim
+	source ~/.vim/startup/plugin/NERDTree.vim
+endif
 
 source ~/.vim/startup/CommonSettings.vim
 "============== tmux settings
@@ -63,13 +71,6 @@ source ~/.vim/startup/keymapping.vim
 "============== plugins settings
 source ~/.vim/startup/plugin/BasicSettings.vim
 
-
-if has('nvim')
-	source ~/.vim/startup/plugin/NERDTree.nvim
-elseif !has('nvim')
-	source ~/.vim/startup/plugin/NERDTree.nvim
-	source ~/.vim/startup/plugin/NERDTree.vim
-endif
 
 
 
