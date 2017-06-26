@@ -6,7 +6,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'lervag/vimtex'
 Plug 'junegunn/seoul256.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " Git plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -18,9 +17,17 @@ Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'kien/rainbow_parentheses.vim'
 
 " Python
 Plug 'python-mode/python-mode'
+
+" Nvim Plugin
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+elseif !has('nvim')
+	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+endif
 
 call plug#end()
 
@@ -72,8 +79,6 @@ source ~/.vim/startup/keymapping.vim
 source ~/.vim/startup/plugin/BasicSettings.vim
 
 
-
-
 "============== auto reload vimrc
 augroup myvimrc
 	au!
@@ -88,3 +93,4 @@ augroup END
              " center buffer around cursor when opening files
  autocmd BufRead * normal zz
 
+ 

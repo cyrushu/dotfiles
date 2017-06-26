@@ -28,7 +28,6 @@ nmap <leader>w :w<CR>
 
 "============== Buffers
 nnoremap <F10> :buffers<CR>:buffer<Space>
-nnoremap <C-w> :bd<CR>
 nnoremap <A-1> :b1<CR>
 nnoremap <A-2> :b2<CR>
 nnoremap <A-3> :b3<CR>
@@ -37,6 +36,7 @@ nnoremap <A-5> :b5<CR>
 nnoremap <A-6> :b6<CR>
 nnoremap <A-7> :b7<CR>
 
+"nnoremap <C-w> :bd<CR>
 
 
 
@@ -50,10 +50,6 @@ nmap } }zz
 nmap { {zz
 
 "============= quick pairs
-vmap [ di[]<ESC>hp
-vmap ' di''<ESC>hp
-vmap " di""<ESC>hp
-vmap < di<><ESC>hp
 nmap <C-/> I#<ESC>
 
 
