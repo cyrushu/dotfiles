@@ -5,7 +5,7 @@ export PYTHONPATH="${PYTHONPATH}:$HOME/software/source_code/oxdna-code/oxDNA/UTI
 export oxdnadir="/home/yilang/software/source_code/oxdna-code/oxDNA/UTILS"
 export cadnano_interface="$oxdnadir/cadnano_interface.py"
 export experiment_fig="/home/yilang/tex_repo/part2_thesis/Figures/experiment/"
-
+export KEYTIMEOUT=1
 
 # oxDNA visualisations
 export OXDNA_GROOVE=1

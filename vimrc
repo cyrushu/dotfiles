@@ -32,7 +32,8 @@ endif
 call plug#end()
 
 
-" ====== oldvim plugin
+" ========== vim studying
+" folding
 
 " ========== interesting plugin
 " tarbar
@@ -52,7 +53,7 @@ call plug#end()
 " Shougo/vimproc.vim
 
 "============== variables
-let dotvim="~/dotfiles/vim"
+"let dotvim="~/dotfiles/vim"
 
 "============== file sharing between nvim and vim
 if has('nvim')
@@ -60,6 +61,8 @@ if has('nvim')
 elseif !has('nvim')
 	source ~/.vim/startup/settings.vim
 endif
+"============== Basic settings
+set virtualedit=all
 
 "============== Neovim and vim plugin conflict
 if has('nvim')
