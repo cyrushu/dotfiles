@@ -12,13 +12,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Utils
 Plug 'bling/vim-airline'
-Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
-
 " Python
 Plug 'python-mode/python-mode'
 
@@ -73,11 +72,17 @@ elseif !has('nvim')
 endif
 
 source ~/.vim/startup/CommonSettings.vim
+
 "============== tmux settings
 source ~/.vim/startup/tmux_settings.vim
+
 "============== keymapping
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/keymapping.vim
+source ~/.vim/startup/plugin/BasicKeymapping.vim
+
+" inside keymapping.vim
+" source ~/.vim/startup/plugin/BasicKeymapping.vim
 "============== plugins settings
 source ~/.vim/startup/plugin/BasicSettings.vim
 
@@ -96,4 +101,3 @@ augroup END
              " center buffer around cursor when opening files
  autocmd BufRead * normal zz
 
- 

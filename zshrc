@@ -106,7 +106,15 @@ autoload run-help-svn
 autoload run-help-svk
 alias help=run-help
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/autojump/autojump.sh
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f /usr/share/autojump/autojump.sh ]; then
+	source /usr/share/autojump/autojump.sh
+fi
+
+if [ -f ~/.fzf.zsh ]; then
+	source ~/.fzf.zsh
+fi
+

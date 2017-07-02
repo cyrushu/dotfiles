@@ -16,3 +16,14 @@ map <C-f> <Plug>(easymotion-bd-f)
 "======== vimack
 nmap <leader>a :tab split<CR>:Ack ""<Left>
 nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+
+
+"============== ctrlp
+let g:ctrlp_map = '<c-p>'
+nmap <leader>p :CtrlP<CR>
+
+
+"============== nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+nnoremap <C-_> :call NERDComment(0,"toggle")<C-m>

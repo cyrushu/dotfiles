@@ -1,6 +1,8 @@
 "============== Clearing mapping
 "unmap < <Nop>
 
+
+
 "============== Arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -20,6 +22,7 @@ vmap <C-b> mqI<Tab><ESC>`q
 
 "============== Deleting
 nnoremap x "_x
+imap <C-BS> <C-W>
 
 
 "============== Leader and leader command
@@ -61,8 +64,6 @@ nmap <C-c> :.w! ~/.vimbuffer<CR>
 map <C-p> :r ~/.vimbuffer<CR>
 
 
-"============== plugins keymapping
-source ~/.vim/startup/plugin/BasicKeymapping.vim
 
 "============== call functions
 nnoremap <F7> O"==============<C-[>
