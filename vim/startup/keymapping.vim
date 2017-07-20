@@ -52,6 +52,11 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
+
+"============== folding
+nnoremap <Tab> za
+
+
 "============= quick pairs
 nmap <C-/> I#<ESC>
 
