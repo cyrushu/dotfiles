@@ -21,6 +21,9 @@ Plug 'kien/rainbow_parentheses.vim'
 " Python
 Plug 'python-mode/python-mode'
 
+" R
+Plug 'jalvesaq/Nvim-R'
+
 " Nvim Plugin
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

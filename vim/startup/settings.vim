@@ -11,6 +11,7 @@ set smartindent
 syntax on
 set encoding=utf8
 set wildmenu
+set mouse=a
 
 " settings on the numbar
 set number
