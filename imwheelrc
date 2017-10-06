@@ -2,5 +2,7 @@
 #None, Thumb2, XF86AudioRaiseVolume
 
 ".*"
-None, Thumb2, Button4, 3
-None, Thumb1, Button5, 3
+None, Thumb1, XF86AudioLowerVolume
+None, Thumb2, XF86AudioRaiseVolume
+#None, Thumb2, Button4, 3
+#None, Thumb1, Button5, 3

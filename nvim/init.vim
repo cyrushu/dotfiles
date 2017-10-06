@@ -1,1 +1,1 @@
-/home/yilang/.vimrc
+../vimrc

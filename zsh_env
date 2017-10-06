@@ -1,18 +1,5 @@
-export force_py="/home/yilang/project_script/force_prism_thesis/force.py"
-export excute_all_force="/home/yilang/project_script/force_prism_thesis/excute_pair_force.sh"
 export TERM="xterm-256color"
-export PYTHONPATH="${PYTHONPATH}:$HOME/software/source_code/oxdna-code/oxDNA/UTILS:$HOME/project_script/pyplot"
-export oxdnadir="/home/yilang/software/source_code/oxdna-code/oxDNA/UTILS"
-export cadnano_interface="$oxdnadir/cadnano_interface.py"
-export experiment_fig="/home/yilang/tex_repo/part2_thesis/Figures/experiment/"
 export KEYTIMEOUT=1
-
-# oxDNA visualisations
-export OXDNA_GROOVE=1
-
-
-# added by Anaconda3 4.3.1 installer
-export PATH="$PATH:/home/yilang/anaconda3/bin"
 
 # python scripts
 export findmismatch="$HOME/project_script/data_manage/find_mismatch_multiprocess.py"
@@ -25,3 +12,6 @@ export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
 
 # the fuck
 eval $(thefuck --alias f)
+
+# the user bin
+export PATH="$PATH:$HOME/.local/bin/"

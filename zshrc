@@ -65,9 +65,6 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-# User configuration
-
-export PATH="$PATH:/home/yilang/Dropbox/dotfiles/virtualbox/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 if [ -f ~/.zsh_env ]; then
