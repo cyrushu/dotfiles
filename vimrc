@@ -19,8 +19,8 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
 " Python
-Plug 'python-mode/python-mode'
-
+"Plug 'python-mode/python-mode'
+Plug 'davidhalter/jedi-vim'
 " R
 Plug 'jalvesaq/Nvim-R'
 
