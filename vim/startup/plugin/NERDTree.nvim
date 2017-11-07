@@ -2,3 +2,7 @@
 no <C-\> :NERDTreeToggle<CR>
 no <C-m> :NERDTreeFromBookmark<space>
 no <CR> <Nop>
+
+"============== deoplete
+let g:deoplete#enable_at_startup = 1
+

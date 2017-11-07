@@ -29,8 +29,7 @@ Plug 'jalvesaq/Nvim-R'
 " Nvim Plugin
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-elseif !has('nvim')
-	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+	"Plug 'zchee/deoplete-jedi'
 endif
 
 call plug#end()

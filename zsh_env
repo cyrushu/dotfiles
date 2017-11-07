@@ -1,11 +1,6 @@
 export TERM="xterm-256color"
 export KEYTIMEOUT=1
 
-# python scripts
-export findmismatch="$HOME/project_script/data_manage/find_mismatch_multiprocess.py"
-export filterdata="$HOME/project_script/data_manage/filter_data_mult.py"
-export conf2angle="$HOME/switch/script/switch_angle/measure_angle.py"
-
 # vim shortcuts
 export vimrc="$HOME/.vimrc"
 export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
@@ -15,3 +10,7 @@ eval $(thefuck --alias f)
 
 # the user bin
 export PATH="$PATH:$HOME/.local/bin/"
+export EDITOR=nvim
+export PATH=/home/huyl/software/anaconda3/bin:$PATH
+
+
