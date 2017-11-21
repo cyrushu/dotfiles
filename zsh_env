@@ -10,7 +10,5 @@ eval $(thefuck --alias f)
 
 # the user bin
 export PATH="$PATH:$HOME/.local/bin/"
-export EDITOR=nvim
-export PATH=/home/huyl/software/anaconda3/bin:$PATH
-
+export EDITOR=vim
 
