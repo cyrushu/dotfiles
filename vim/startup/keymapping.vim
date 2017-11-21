@@ -66,7 +66,7 @@ nmap <C-/> I#<ESC>
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 "paste from buffer
-map <C-p> :r ~/.vimbuffer<CR>
+nnoremap <A-p> :r ~/.vimbuffer<CR>
 
 
 
