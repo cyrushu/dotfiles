@@ -22,7 +22,7 @@ Plug 'kien/rainbow_parentheses.vim'
 "Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 " R
-Plug 'jalvesaq/Nvim-R'
+" Plug 'jalvesaq/Nvim-R'
 
 " Nvim Plugin
 if has('nvim')
