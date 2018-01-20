@@ -56,3 +56,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|pdf|desktop|mp3)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+"============== UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
