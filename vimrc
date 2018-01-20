@@ -31,6 +31,7 @@ Plug 'cazador481/fakeclip.neovim'
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'zchee/deoplete-jedi'
+	Plug 'wellle/tmux-complete.vim'
 else
 	Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/nvim-yarp'
