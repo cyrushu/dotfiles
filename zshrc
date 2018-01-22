@@ -44,7 +44,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(pip python tmux zsh-autosuggestions)
+plugins=(pip python tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,4 +117,8 @@ fi
 
 if [ -f ~/.zsh_local ]; then
     . ~/.zsh_local
+fi
+
+if [ -f ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
