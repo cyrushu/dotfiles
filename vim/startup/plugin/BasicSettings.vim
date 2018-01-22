@@ -45,7 +45,6 @@ let g:rbpt_colorpairs = [
     \ ]
 
 let g:rbpt_max = 16
-
 let g:rbpt_loadcmd_toggle = 0
 
 "============== ctrlp
@@ -57,3 +56,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|pdf|desktop|mp3)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+"============== UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

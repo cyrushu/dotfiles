@@ -29,5 +29,3 @@ if !exists('*TitleDet')
     endfunction
 endif
 
-
-

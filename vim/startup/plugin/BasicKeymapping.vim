@@ -32,4 +32,5 @@ if has('win32')
 else
   nmap <C-_> <leader>c<Space>
   vmap <C-_> <leader>c<Space>
+  " imap <C-_> <C-[><leader>c<Space>
 endif
