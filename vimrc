@@ -3,8 +3,6 @@ if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'zchee/deoplete-jedi'
 	Plug 'wellle/tmux-complete.vim'
-	" Plug 'Shougo/neosnippet'
-	" Plug 'Shougo/neosnippet-snippets'
 else
 	Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/nvim-yarp'
@@ -54,6 +52,8 @@ call plug#end()
 " folding
 
 " ========== interesting plugin
+" Plug 'Shougo/neosnippet'
+" Plug 'Shougo/neosnippet-snippets'
 " tarbar
 " taglist
 " ctrlp, file searching
@@ -70,8 +70,6 @@ call plug#end()
 " Shougo/unite.vim
 " Shougo/vimproc.vim
 
-"============== variables
-"let dotvim="~/dotfiles/vim"
 
 "============== file sharing between nvim and vim
 if has('nvim')
@@ -79,62 +77,6 @@ if has('nvim')
 elseif !has('nvim')
 	source ~/.vim/startup/settings.vim
 endif
-"============== Basic settings
-set virtualedit=all
-
-"============== Neovim and vim plugin conflict
-if has('nvim')
-	source ~/.vim/startup/plugin/NERDTree.nvim
-elseif !has('nvim')
-	source ~/.vim/startup/plugin/NERDTree.nvim
-	source ~/.vim/startup/plugin/NERDTree.vim
-endif
-
 source ~/.vim/startup/CommonSettings.vim
-
-"============== tmux settings
-source ~/.vim/startup/tmux_settings.vim
-
-"============== keymapping
-source ~/.vim/startup/functions.vim
-source ~/.vim/startup/keymapping.vim
-
-" inside keymapping.vim
-" source ~/.vim/startup/plugin/BasicKeymapping.vim
-"============== plugins settings
-source ~/.vim/startup/plugin/BasicSettings.vim
-
-"============== auto reload vimrc
-augroup myvimrc
-	au!
-	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
-
-" Remember cursor position between vim sessions
- autocmd BufReadPost *
-             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-             \   exe "normal! g'\"" |
-             \ endif
-             " center buffer around cursor when opening files
- autocmd BufRead * normal zz
-
-
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" " SuperTab like snippets behavior.
-" " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-" "imap <expr><TAB>
-" " \ pumvisible() ? "\<C-n>" :
-" " \ neosnippet#expandable_or_jumpable() ?
-" " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" " For conceal markers.
-" if has('conceal')
-  " set conceallevel=2 concealcursor=niv
-" endif
+source ~/.vim/startup/CommonKeymapping.vim
+source ~/.vim/startup/vimFunctions.vim

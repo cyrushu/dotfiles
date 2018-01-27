@@ -1,3 +1,18 @@
+"============== auto reload vimrc
+augroup myvimrc
+	au!
+	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+" Remember cursor position between vim sessions
+ autocmd BufReadPost *
+             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+             \   exe "normal! g'\"" |
+             \ endif
+             " center buffer around cursor when opening files
+ autocmd BufRead * normal zz
+
+
 if !exists('*AddTitle')
     function AddTitle()
 	    call append(0,"/*=============================================================================")
