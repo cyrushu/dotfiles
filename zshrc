@@ -118,3 +118,7 @@ fi
 if [ -f ~/.zsh_local ]; then
     . ~/.zsh_local
 fi
+
+if [ -f ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
