@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in git-completion.bash tmux.conf vim vimrc zsh_env zshrc;
+for i in "git-completion.bash" "tmux.conf" "vim" "vimrc" "zsh_env" "zshrc";
 do
 	ln -s $(pwd)/$i ~/.$i
 done

@@ -6,7 +6,7 @@ export vimrc="$HOME/.vimrc"
 export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
 
 # the fuck
-eval $(thefuck --alias f)
+# eval $(thefuck --alias f)
 
 # the user bin
 export PATH="$PATH:$HOME/.local/bin/"
