@@ -10,3 +10,9 @@ export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
 
 # the user bin
 export PATH="$PATH:$HOME/.local/bin/"
+
+# neovim
+if hash nvim 2>/dev/null; then
+        alias vim=nvim
+	export EDITOR="nvim"
+fi
