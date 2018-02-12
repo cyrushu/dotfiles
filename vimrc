@@ -23,7 +23,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Utils
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': './install --all' }
