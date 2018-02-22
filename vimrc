@@ -35,6 +35,9 @@ Plug 'davidhalter/jedi-vim'
 " R
 " Plug 'jalvesaq/Nvim-R'
 
+" Clang
+Plug 'zchee/deoplete-clang'
+
 " Clipboard
 Plug 'cazador481/fakeclip.neovim'
 
