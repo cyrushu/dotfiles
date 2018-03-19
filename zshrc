@@ -60,16 +60,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# personal aliases file
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-if [ -f ~/.zsh_env ]; then
-    . ~/.zsh_env
-fi
 
 # User function key
 cdUndoKey() {
@@ -115,10 +105,22 @@ if [ -f ~/.fzf.zsh ]; then
 	source ~/.fzf.zsh
 fi
 
-if [ -f ~/.zsh_local ]; then
-    . ~/.zsh_local
-fi
-
 if [ -f ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+# personal aliases file
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
+# export MANPATH="/usr/local/man:$MANPATH"
+if [ -f ~/.zsh_env ]; then
+    source ~/.zsh_env
+fi
+
+
+if [ -f ~/.zsh_local ]; then
+    source ~/.zsh_local
+fi
+

@@ -84,3 +84,4 @@ source ~/.vim/startup/CommonSettings.vim
 source ~/.vim/startup/CommonKeymapping.vim
 source ~/.vim/startup/vimFunctions.vim
 
+source ~/.vim_local/nvim_python.vim
