@@ -8,7 +8,7 @@ zstyle ':completion:*' max-errors 1
 zstyle ':completion:*' menu select=long-list select=1
 zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle :compinstall filename '/home/yilang/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -29,8 +29,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
-ZSH_THEME=rkj-repos
-#ZSH_THEME="agnoster"
+#ZSH_THEME=rkj-repos
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
