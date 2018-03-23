@@ -9,7 +9,7 @@ export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
 # eval $(thefuck --alias f)
 
 # the user bin
-export PATH="$PATH:$HOME/.local/bin/"
+export PATH=$HOME/.local/bin/:$PATH
 
 # neovim
 if hash nvim 2>/dev/null; then

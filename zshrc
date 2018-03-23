@@ -8,7 +8,7 @@ zstyle ':completion:*' max-errors 1
 zstyle ':completion:*' menu select=long-list select=1
 zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle :compinstall filename '/home/yilang/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -29,8 +29,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
-ZSH_THEME=rkj-repos
-#ZSH_THEME="agnoster"
+#ZSH_THEME=rkj-repos
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -60,16 +60,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# personal aliases file
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-if [ -f ~/.zsh_env ]; then
-    . ~/.zsh_env
-fi
 
 # User function key
 cdUndoKey() {
@@ -115,10 +105,22 @@ if [ -f ~/.fzf.zsh ]; then
 	source ~/.fzf.zsh
 fi
 
-if [ -f ~/.zsh_local ]; then
-    . ~/.zsh_local
-fi
-
 if [ -f ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+# personal aliases file
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
+# export MANPATH="/usr/local/man:$MANPATH"
+if [ -f ~/.zsh_env ]; then
+    source ~/.zsh_env
+fi
+
+
+if [ -f ~/.zsh_local ]; then
+    source ~/.zsh_local
+fi
+
