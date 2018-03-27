@@ -46,8 +46,6 @@ Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
-
-
 call plug#end()
 
 
@@ -59,20 +57,29 @@ call plug#end()
 " Plug 'Shougo/neosnippet-snippets'
 " tarbar
 " taglist
-" ctrlp, file searching
-" rainbow_parentheses
 " UltiSnips
 " delimitMate auto (){}""
 " TaskList
 " fugitive git-plugins
 " vim-surround parathensis plugins
 " tcomment_vim comment plugins
-" fzf
 
 " important plugin
 " Shougo/unite.vim
 " Shougo/vimproc.vim
 
+
+"============== sometime you need to specify python for neovim, please try to
+"============== modify the python location. you could also write them into the
+"============== nvim_local.vim file
+
+if has('nvim')
+	if filereadable("~/.vim_local/nvim_local.vim")
+		source ~/.vim_local/nvim_local.vim
+		" let g:python_host_prog = '~/envs/neovim/bin/python'
+		" let g:python3_host_prog = '~/envs/neovim3/bin/python'
+	endif
+endif
 
 "============== file sharing between nvim and vim
 if has('nvim')
@@ -84,4 +91,3 @@ source ~/.vim/startup/CommonSettings.vim
 source ~/.vim/startup/CommonKeymapping.vim
 source ~/.vim/startup/vimFunctions.vim
 
-source ~/.vim_local/nvim_python.vim
