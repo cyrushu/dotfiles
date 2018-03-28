@@ -5,8 +5,10 @@ export KEYTIMEOUT=1
 export vimrc="$HOME/.vimrc"
 export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
 
-# the fuck
-# eval $(thefuck --alias f)
+# the fuck alias
+if hash thefuck 2>/dev/null;then
+	eval "$(thefuck --alias f)"
+fi
 
 # the user bin
 export PATH=$HOME/.local/bin/:$PATH
