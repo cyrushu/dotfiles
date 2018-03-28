@@ -66,8 +66,10 @@ nnoremap <A-p> :r ~/.vimbuffer<CR>
 
 
 "============== call functions
+nnoremap <F5> <Plug>(Pydocstring)
 nnoremap <F7> O"==============<C-[>
-map <F6> :call TitleDet()<cr>'s
+nnoremap <F6> :call AddTitle()<cr>'s
+nnoremap <C-F6> :call TitleDet()<cr>'s
 
 "================================================================
 "========================Plugin keymapping=======================
@@ -120,3 +122,6 @@ else
   vmap <C-_> <leader>c<Space>
   " imap <C-_> <C-[><leader>c<Space>
 endif
+
+"============== pydocstring
+nmap <silent> <F5> <Plug>(pydocstring)
