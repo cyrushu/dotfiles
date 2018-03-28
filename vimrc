@@ -31,6 +31,7 @@ Plug 'kien/rainbow_parentheses.vim'
 " Python
 "Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
+Plug 'heavenshell/vim-pydocstring'
 
 " R
 " Plug 'jalvesaq/Nvim-R'
@@ -88,6 +89,8 @@ elseif !has('nvim')
 	source ~/.vim/startup/settings.vim
 endif
 source ~/.vim/startup/CommonSettings.vim
-source ~/.vim/startup/CommonKeymapping.vim
 source ~/.vim/startup/vimFunctions.vim
+source ~/.vim/startup/CommonKeymapping.vim
 
+"============== Filetype autocmd
+autocmd FileType python setlocal foldenable foldmethod=syntax tabstop=4 shiftwidth=4 softtabstop=4 expandtab 

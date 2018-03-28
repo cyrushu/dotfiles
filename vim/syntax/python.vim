@@ -327,3 +327,10 @@ let &cpo = s:cpo_save
 unlet s:cpo_save
 
 " vim:set sw=2 sts=2 ts=8 noet:
+
+syn region pythonString
+      \ start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend fold
+      \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+syn region pythonRawString
+      \ start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend fold
+      \ contains=pythonSpaceError,pythonDoctest,@Spell
