@@ -18,3 +18,9 @@ mkdir -p ~/.vimundo
 # neovim
 mkdir -p ~/.config/
 ln -s ${the_dir}/nvim ~/.config/
+
+mkdir -p ~/.local/bin/
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x nvim.appimage
+mv nvim.appimage $HOME/.local/bin/vim
+echo "export PATH=$HOME/.local/bin:$PATH" >> .zsh_local
