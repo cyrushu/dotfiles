@@ -116,12 +116,11 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
-if [ -f ~/.zsh_env ]; then
-    source ~/.zsh_env
-fi
-
 
 if [ -f ~/.zsh_local ]; then
     source ~/.zsh_local
 fi
 
+if [ -f ~/.zsh_env ]; then
+    source ~/.zsh_env
+fi
