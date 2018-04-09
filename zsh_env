@@ -1,20 +1,9 @@
 export TERM="xterm-256color"
 export KEYTIMEOUT=1
 
-# vim shortcuts
-export vimrc="$HOME/.vimrc"
-export vim_keymap="$HOME/dotfiles/vim/startup/keymapping.vim"
-
-# the fuck alias
-if hash thefuck 2>/dev/null;then
-	eval "$(thefuck --alias f)"
-fi
+# the fuck
+# eval $(thefuck --alias f)
 
 # the user bin
 export PATH=$HOME/.local/bin/:$PATH
 
-# neovim
-if hash nvim 2>/dev/null; then
-        alias vim=nvim
-	export EDITOR="nvim"
-fi
