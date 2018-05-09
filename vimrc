@@ -44,6 +44,9 @@ Plug 'cazador481/fakeclip.neovim'
 
 Plug 'SirVer/ultisnips'
 
+" Utils, autoformat
+Plug 'Chiel92/vim-autoformat'
+
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 

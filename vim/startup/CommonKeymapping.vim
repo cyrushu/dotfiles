@@ -125,3 +125,6 @@ endif
 
 "============== pydocstring
 nmap <silent> <F5> <Plug>(pydocstring)
+
+"============== vim-autoformat
+noremap <F3> :Autoformat<CR>
