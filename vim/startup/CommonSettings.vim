@@ -6,6 +6,7 @@ set virtualedit=all
 "============== deoplete
 let g:deoplete#enable_at_startup = 1
 
+
 "============== fakeclip
 let g:vim_fakeclip_tmux_plus=1 
 
@@ -126,4 +127,6 @@ if !has('nvim')
     let NERDTreeCascadeOpenSingleChildDir=0
 endif
 
-
+"============== vim-autoformat
+" let g:formatter_yapf_style = 'pep8'
+" let g:formatterpath = ['/home/huyl/.local/bin']
