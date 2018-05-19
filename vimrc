@@ -1,12 +1,14 @@
 call plug#begin('~/.vim_local/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'Shougo/denite.nvim'
 	Plug 'zchee/deoplete-jedi'
 	Plug 'wellle/tmux-complete.vim'
 else
-	Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'ctrlpvim/ctrlp.vim'
 endif
 
 Plug 'Yggdroot/indentLine'
@@ -23,14 +25,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Utils
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
 " Python
 "Plug 'python-mode/python-mode'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 
 " R
