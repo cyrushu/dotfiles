@@ -67,14 +67,56 @@ let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
 "============== ctrlp
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|pdf|desktop|mp3)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+" let g:ctrlp_working_path_mode = 'ra'
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_custom_ignore = {
+  " \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  " \ 'file': '\v\.(exe|so|dll|pdf|desktop|mp3)$',
+  " \ 'link': 'some_bad_symbolic_links',
+  " \ }
+
+"============== denite
+"
+if has('nvim')
+  " reset 50% winheight on window resize
+  augroup deniteresize
+    autocmd!
+    autocmd VimResized,VimEnter * call denite#custom#option('default',
+          \'winheight', winheight(0) / 2)
+  augroup end
+
+  call denite#custom#option('default', {
+        \ 'prompt': '❯'
+        \ })
+
+  call denite#custom#var('file_rec', 'command',
+        \ ['rg', '--files', '--glob', '!.git', ''])
+  call denite#custom#var('grep', 'command', ['rg'])
+  call denite#custom#var('grep', 'default_opts',
+        \ ['--hidden', '--vimgrep', '--no-heading', '-S'])
+  call denite#custom#var('grep', 'recursive_opts', [])
+  call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+  call denite#custom#var('grep', 'separator', ['--'])
+  call denite#custom#var('grep', 'final_opts', [])
+  call denite#custom#map('insert', '<Esc>', '<denite:enter_mode:normal>',
+        \'noremap')
+  call denite#custom#map('normal', '<Esc>', '<NOP>',
+        \'noremap')
+  call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplit>',
+        \'noremap')
+  call denite#custom#map('normal', '<C-v>', '<denite:do_action:vsplit>',
+        \'noremap')
+  call denite#custom#map('normal', 'dw', '<denite:delete_word_after_caret>',
+        \'noremap')
+endif
+nnoremap <C-p> :<C-u>Denite file_rec<CR>
+nnoremap <leader>s :<C-u>Denite buffer<CR>
+nnoremap <leader><Space>s :<C-u>DeniteBufferDir buffer<CR>
+nnoremap <leader>8 :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+nnoremap <leader>/ :<C-u>Denite grep:. -mode=normal<CR>
+nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:. -mode=normal<CR>
+nnoremap <leader>d :<C-u>DeniteBufferDir file_rec<CR>
 
 
 "============== NERDTree settings, only for vim
@@ -86,5 +128,5 @@ if !has('nvim')
 endif
 
 "============== vim-autoformat
-let g:formatter_yapf_style = 'pep8'
-let g:formatterpath = ['/home/huyl/.local/bin']
+" let g:formatter_yapf_style = 'pep8'
+" let g:formatterpath = ['/home/huyl/.local/bin']
