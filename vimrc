@@ -97,3 +97,4 @@ source ~/.vim/startup/CommonKeymapping.vim
 
 "============== Filetype autocmd
 autocmd FileType python setlocal foldenable foldmethod=syntax tabstop=4 shiftwidth=4 softtabstop=4 expandtab 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
