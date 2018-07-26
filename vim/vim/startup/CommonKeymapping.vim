@@ -34,7 +34,7 @@ nnoremap <A-5> :b5<CR>
 nnoremap <A-6> :b6<CR>
 nnoremap <A-7> :b7<CR>
 
-"nnoremap <C-w> :bd<CR>
+nnoremap <C-w> :bd<CR>
 
 
 "============== always centered
@@ -107,8 +107,8 @@ nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
 
 "============== ctrlp
-let g:ctrlp_map = '<c-p>'
-nmap <leader>p :CtrlP<CR>
+" let g:ctrlp_map = '<c-p>'
+" nmap <leader>p :CtrlP<CR>
 
 
 "============== nerdcommenter
