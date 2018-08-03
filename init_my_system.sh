@@ -3,33 +3,30 @@
 
 
 the_dir=$(dirname $(pwd)/$0)
-ln_files=("tmux.conf" "vim" "vimrc" "zsh_env" "zshrc")
 
-for i in ln_files;
-do
-	#ln -s ${the_dir}/${i} ~/.${i}
-	echo ${ln_files}
-	echo $the_dir
-done
+# tmux
+curl -L https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf -o ~/.tmux.conf
+ln -s ${the_dir}/tmux/tmux/ ~/.tmux
+ln -s ${the_dir}/tmux/tmux.conf ~/.tmux.conf.local
 
+# oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+ln -s ${the_dir}/zsh/zshrc ~/.zshrc
+ln -s ${the_dir}/zsh/zsh_env ~/.zsh_env
+if [ -f ~/.zsh_local ];then
+	echo "~/.zsh_local already exist. please write any local configurations into this file"
+else
+	echo "# please write local configuration into .zsh_local file" | tee ~/.zsh_local
+fi
 
-# vim
+# vim & neovim
 mkdir -p ~/.vimtmp
 mkdir -p ~/.vimswap
 mkdir -p ~/.vimundo
-
-# neovim
 mkdir -p ~/.config/
-
-# tmux
-curl https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf >> ~/.tmux.conf
-
-# oh-my-zsh
-cd $HOME
-git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
-cd -
-
-# neovim
+ln -s ${the_dir}/vim/vim/ ~/.vim
+ln -s ${the_dir}/vim/vimrc ~/.vimrc
+ln -s ${the_dir}/vim/nvim ~/.config/nvim
 mkdir -p ~/.local/bin/
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 chmod u+x nvim.appimage
