@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-
 the_dir=$(dirname $(pwd)/$0)
 
 # tmux
