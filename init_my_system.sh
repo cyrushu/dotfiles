@@ -1,6 +1,15 @@
 #!/bin/bash
 
-
+# find the OS you are working on
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo ${machine}
 
 the_dir=$(dirname $(pwd)/$0)
 
@@ -28,7 +37,13 @@ ln -s ${the_dir}/vim/vim/ ~/.vim
 ln -s ${the_dir}/vim/vimrc ~/.vimrc
 ln -s ${the_dir}/vim/nvim ~/.config/nvim
 mkdir -p ~/.local/bin/
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-chmod u+x nvim.appimage
-mv nvim.appimage $HOME/.local/bin/vim
+
+if [ "$machine" = "Linux" ]; then
+	curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+	chmod u+x nvim.appimage
+	mv nvim.appimage $HOME/.local/bin/vim
+else
+	echo "appimage is only working for Linux system, please find https://github.com/neovim/neovim/wiki/Installing-Neovim for Neovim installation" 
+fi
+
 echo "export PATH=$HOME/.local/bin:$PATH" >> .zsh_local
