@@ -9,7 +9,7 @@ case "${unameOut}" in
     MINGW*)     machine=MinGw;;
     *)          machine="UNKNOWN:${unameOut}"
 esac
-echo ${machine}
+echo "current machine is ${machine}"
 
 the_dir=$(dirname $(pwd)/$0)
 
@@ -46,4 +46,7 @@ else
 	echo "appimage is only working for Linux system, please find https://github.com/neovim/neovim/wiki/Installing-Neovim for Neovim installation" 
 fi
 
-echo "export PATH=$HOME/.local/bin:$PATH" >> .zsh_local
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x nvim.appimage
+mv nvim.appimage $HOME/.local/bin/vim
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.zsh_local
