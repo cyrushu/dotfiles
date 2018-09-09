@@ -28,12 +28,99 @@ fi
 
 
 
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 export KEYTIMEOUT=1
 
 # the fuck
-# eval $(thefuck --alias f)
+eval $(thefuck --alias f)
 
-# the user bin
-export PATH=$HOME/.local/bin/:$PATH
 
+# zsh environment configure
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory autocd
+bindkey -e
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
+
+
+
+# You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+
+# User function key
+cdUndoKey() {
+	popd      > /dev/null
+	zle       reset-prompt
+	echo
+	ls
+	echo
+}
+
+cdParentKey() {
+	pushd .. > /dev/null
+	zle      reset-prompt
+	echo
+	ls
+	echo
+}
+
+
+zle -N                 cdParentKey
+zle -N                 cdUndoKey
+bindkey '^[[1;3A'      cdParentKey
+bindkey '^[[1;3D'      cdUndoKey
+
+# disable ctrl+s to freeze terminal
+stty -ixon
+
+autoload -U run-help
+autoload run-help-git
+autoload run-help-svn
+autoload run-help-svk
+alias help=run-help
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+# plugins=(pip python tmux thefuck)
+
+##########################
+# oh-my-zsh completion overwrited by antigen
+##########################
+# End of lines configured by zsh-newuser-install
+# Path to your oh-my-zsh installation.
+# export ZSH=$HOME/.oh-my-zsh
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+# ZSH_THEME="random"
+# ZSH_THEME=rkj-repos
+# ZSH_THEME="agnoster"
+######## plugins #########
+# plugins=(pip python tmux thefuck)
+##########################

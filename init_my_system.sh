@@ -17,6 +17,7 @@ the_dir=$(dirname $(pwd)/$0)
 if [ ! -f ~/.zshrc ];then
 	ln -s ${the_dir}/zsh/zshrc ~/.zshrc
 	ln -s ${the_dir}/zsh/zsh_env ~/.zsh_env
+	ln -s ${the_dir}/zsh/antigenrc ~/.antigenrc
 else
 	echo "zshrc exists already"
 fi
