@@ -22,11 +22,11 @@ fi
 
 if [ -f ~/.local/bin/antigen.zsh ]; then
 	source ~/.local/bin/antigen.zsh
-	antigen init .antigenrc
+	antigen init $HOME/.antigenrc
 else
 	source ~/.zsh_env
 	source ~/.local/bin/antigen.zsh
-	antigen init .antigenrc
+	antigen init $HOME/.antigenrc
 fi
 
 
@@ -45,3 +45,6 @@ if [ -f ~/.fzf.zsh ]; then
 fi
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
