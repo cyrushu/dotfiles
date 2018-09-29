@@ -130,3 +130,9 @@ endif
 "============== vim-autoformat
 " let g:formatter_yapf_style = 'pep8'
 " let g:formatterpath = ['/home/huyl/.local/bin']
+
+
+
+
+"============== jedi-vim
+let g:jedi#completions_enabled = 0

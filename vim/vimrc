@@ -37,7 +37,7 @@ Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
 " Python
 "Plug 'python-mode/python-mode'
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 
 " R
@@ -98,10 +98,11 @@ if has('nvim')
 elseif !has('nvim')
 	source ~/.vim/startup/settings.vim
 endif
+source ~/.vim/startup/CommonKeymapping.vim
 source ~/.vim/startup/CommonSettings.vim
 source ~/.vim/startup/vimFunctions.vim
-source ~/.vim/startup/CommonKeymapping.vim
 
 "============== Filetype autocmd
-autocmd FileType python setlocal foldenable foldmethod=syntax tabstop=4 shiftwidth=4 softtabstop=4 expandtab 
+autocmd FileType python setlocal foldenable foldmethod=syntax tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType python nmap gf <leader>g
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

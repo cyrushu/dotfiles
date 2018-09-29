@@ -5,12 +5,12 @@ augroup myvimrc
 augroup END
 
 " Remember cursor position between vim sessions
- autocmd BufReadPost *
-             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-             \   exe "normal! g'\"" |
-             \ endif
-             " center buffer around cursor when opening files
- autocmd BufRead * normal zz
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+     \   exe "normal! g'\"" |
+     \ endif
+     " center buffer around cursor when opening files
+autocmd BufRead * normal zz
 
 
 if !exists('*AddTitle')

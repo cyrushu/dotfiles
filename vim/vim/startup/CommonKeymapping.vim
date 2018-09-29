@@ -3,6 +3,7 @@ no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
 no <up> <Nop>
+noremap <F1> <Esc>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -62,11 +63,11 @@ vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 "paste from buffer
 nnoremap <A-p> :r ~/.vimbuffer<CR>
+nnoremap <F5> :noh<CR>
 
 
 
 "============== call functions
-nnoremap <F5> <Plug>(Pydocstring)
 nnoremap <F7> O"==============<C-[>
 nnoremap <F6> :call AddTitle()<cr>'s
 nnoremap <C-F6> :call TitleDet()<cr>'s
@@ -124,7 +125,7 @@ else
 endif
 
 "============== pydocstring
-nmap <silent> <F5> <Plug>(pydocstring)
+nmap <silent> <F3> <Plug>(pydocstring)
 
 "============== vim-autoformat
-noremap <F3> :Autoformat<CR>
+" noremap <F3> :Autoformat<CR>
