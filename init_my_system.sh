@@ -58,6 +58,12 @@ else
 		curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 		chmod u+x nvim.appimage
 		mv nvim.appimage $HOME/.local/bin/vim
+		mkdir -p ~/.vim_local
+		echo "let g:python3_host_prog = '$(which python3)'" >> ~/.vim_local/nvim_local.vim
+		pip3 install --user neovim
+		echo "let g:python_host_prog = '$(which python2)'" >> ~/.vim_local/nvim_local.vim
+		pip2 install --user neovim
+		vim +'PlugInstall --sync' +qa
 	else
 		echo "appimage is only working for Linux system, please find https://github.com/neovim/neovim/wiki/Installing-Neovim for Neovim installation" 
 	fi
