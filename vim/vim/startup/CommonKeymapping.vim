@@ -20,6 +20,9 @@ vmap <C-b> mqI<Tab><ESC>`q
 nnoremap x "_x
 imap <C-BS> <C-W>
 
+"============== Searching
+vnoremap <A-f> "iy/<C-r>i<CR>
+
 
 "============== Leader and leader command
 let mapleader = ","
