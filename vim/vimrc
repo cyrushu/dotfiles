@@ -33,15 +33,11 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
 " Python
-"Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 
-" R
-" Plug 'jalvesaq/Nvim-R'
 
 " Clang
 Plug 'zchee/deoplete-clang'
@@ -57,6 +53,11 @@ Plug 'Chiel92/vim-autoformat'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
+" rm
+" Plug 'junegunn/fzf', { 'do': './install --all' }
+" Plug 'python-mode/python-mode'
+" Plug 'jalvesaq/Nvim-R'
+"
 call plug#end()
 
 

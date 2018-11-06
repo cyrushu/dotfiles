@@ -4,3 +4,5 @@
 *.un~
 
 .netrwhist
+plug.vim.old
+plug.vim

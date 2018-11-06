@@ -3,6 +3,7 @@ no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
 no <up> <Nop>
+no <C-Space> <Nop>
 noremap <F1> <Esc>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
