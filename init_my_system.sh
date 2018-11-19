@@ -69,3 +69,6 @@ else
 	fi
 fi
 
+
+# language server configuration
+pip install 'python-language-server[all]'
