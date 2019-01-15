@@ -109,14 +109,17 @@ if has('nvim')
 	\'noremap')
   call denite#custom#map('normal', 'dw', '<denite:delete_word_after_caret>',
 	\'noremap')
+
+  call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+  call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+  nnoremap <C-p> :<C-u>Denite file_rec<CR>
+  nnoremap <leader>s :<C-u>Denite buffer<CR>
+  nnoremap <leader><Space>s :<C-u>DeniteBufferDir buffer<CR>
+  nnoremap <leader>8 :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+  nnoremap <leader>/ :<C-u>Denite grep:. -mode=normal<CR>
+  nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:. -mode=normal<CR>
+  nnoremap <leader>d :<C-u>DeniteBufferDir file_rec<CR>
 endif
-nnoremap <C-p> :<C-u>Denite file_rec<CR>
-nnoremap <leader>s :<C-u>Denite buffer<CR>
-nnoremap <leader><Space>s :<C-u>DeniteBufferDir buffer<CR>
-nnoremap <leader>8 :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
-nnoremap <leader>/ :<C-u>Denite grep:. -mode=normal<CR>
-nnoremap <leader><Space>/ :<C-u>DeniteBufferDir grep:. -mode=normal<CR>
-nnoremap <leader>d :<C-u>DeniteBufferDir file_rec<CR>
 
 
 "============== NERDTree settings, only for vim
@@ -127,14 +130,7 @@ if !has('nvim')
     let NERDTreeCascadeOpenSingleChildDir=0
 endif
 
-"============== vim-autoformat
-" let g:formatter_yapf_style = 'pep8'
-" let g:formatterpath = ['/home/huyl/.local/bin']
-
-
-
 
 "============== jedi-vim
 let g:jedi#completions_enabled = 0
-
 

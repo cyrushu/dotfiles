@@ -9,6 +9,7 @@ antigen bundle pip
 antigen bundle python
 antigen bundle tmux
 antigen bundle thefuck
+antigen bundle git
 antigen bundle chrissicool/zsh-256color
 
 antigen apply

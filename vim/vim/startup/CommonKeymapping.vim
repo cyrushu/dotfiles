@@ -5,10 +5,6 @@ no <right> <Nop>
 no <up> <Nop>
 no <C-Space> <Nop>
 noremap <F1> <Esc>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 "============== inserting
 imap <C-CR> <ESC>o
