@@ -69,6 +69,10 @@ else
 	fi
 fi
 
+if [ ! -f ~/.gitconfig ];then
+	mv ~/.gitconfig ~/.gitconfig_local
+	ln -s ${the_dir}/git/gitconfig ~/.gitconfig
+fi
 
 # language server configuration
 pip install 'python-language-server[all]'

@@ -1,0 +1,4 @@
+[include]
+	path = ~/.gitconfig_local
+[pager]
+	branch = false
