@@ -2,6 +2,7 @@
 set hidden
 
 let g:LanguageClient_autoStart = 1  
+let g:LanguageClient_useVirtualText = 0
 
 let g:LanguageClient_serverCommands = {
 \ 'cpp': ['/home/yilang/software/cquery/build/release/bin/cquery', 
