@@ -77,3 +77,7 @@ fi
 
 # language server configuration
 pip install 'python-language-server[all]'
+
+# git ignore
+ln -s ${the_dir}/git/gitignore ~/.gitignore
+git config --global core.excludesFile ~/.gitignore

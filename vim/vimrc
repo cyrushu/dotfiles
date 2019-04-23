@@ -5,6 +5,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:ale_completion_enabled = 1
+
 call plug#begin('~/.vim_local/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -34,7 +36,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/seoul256.vim'
 Plug 'Raimondi/delimitMate'
 
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'w0rp/ale'
 " Plug 'vim-scripts/Conque-GDB', { 'for':'cpp' }
 
 
@@ -108,7 +111,8 @@ source ~/.vim/startup/CommonSettings.vim
 source ~/.vim/startup/vimFunctions.vim
 
 "============== LanguageClient for custom settings
-source ~/.vim/startup/LanguageClient.vim
+" source ~/.vim/startup/LanguageClient.vim
+source ~/.vim/startup/ALE.vim
 
 "============== Filetype autocmd
 autocmd FileType yaml source ~/.vim/LanguageModule/yaml.vim

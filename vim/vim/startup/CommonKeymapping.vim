@@ -63,7 +63,7 @@ vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 "paste from buffer
 nnoremap <A-p> :r ~/.vimbuffer<CR>
-nnoremap <F5> :noh<CR>
+nnoremap <F4> :noh<CR>
 
 
 

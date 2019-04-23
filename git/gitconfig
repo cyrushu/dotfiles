@@ -2,3 +2,5 @@
 	path = ~/.gitconfig_local
 [pager]
 	branch = false
+[core]
+	excludesFile = /home/yilang/.gitignore
