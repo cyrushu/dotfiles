@@ -56,7 +56,7 @@ Plug 'shime/vim-livedown' ,{'for':'markdown'}
 Plug 'lervag/vimtex',{'for':'latex' }
 
 " Clipboard
-Plug 'cazador481/fakeclip.neovim'
+Plug 'kana/vim-fakeclip'
 
 Plug 'SirVer/ultisnips'
 

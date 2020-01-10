@@ -4,3 +4,4 @@
 	branch = false
 [core]
 	excludesFile = /home/yilang/.gitignore
+	pager = cat

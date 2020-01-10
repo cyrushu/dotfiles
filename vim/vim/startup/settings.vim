@@ -12,6 +12,7 @@ syntax on
 set encoding=utf8
 set wildmenu
 set mouse=a
+set foldmethod=manual
 
 " settings on the numbar
 set number
