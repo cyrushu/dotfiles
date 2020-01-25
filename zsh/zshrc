@@ -20,6 +20,10 @@ if [ -d ~/.local/bin ]; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
 
+if [ -f ~/.zsh_local ]; then
+    source ~/.zsh_local
+fi
+
 if [ -f ~/.local/bin/antigen.zsh ]; then
 	source ~/.local/bin/antigen.zsh
 	antigen init $HOME/.antigenrc
@@ -29,13 +33,8 @@ else
 	antigen init $HOME/.antigenrc
 fi
 
-
 if [ -f ~/.zsh_env ]; then
     source ~/.zsh_env
-fi
-
-if [ -f ~/.zsh_local ]; then
-    source ~/.zsh_local
 fi
 
 if [ -f ~/.fzf.zsh ]; then
