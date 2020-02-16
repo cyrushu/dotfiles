@@ -42,14 +42,15 @@ fi
 
 
 # vim & neovim
+# vim 
 mkdir -p ~/.vimtmp
 mkdir -p ~/.vimswap
 mkdir -p ~/.vimundo
-mkdir -p ~/.config/
-ln -s ${the_dir}/vim/vim/ ~/.vim
-ln -s ${the_dir}/vim/vimrc ~/.vimrc
-ln -s ${the_dir}/vim/nvim ~/.config/nvim
-mkdir -p ~/.local/bin/
+mkdir -p ~/.config
+mkdir -p ~/.local/bin
+ln -s ${the_dir}/vim/vim/ $HOME/.vim
+ln -s ${the_dir}/vim/vimrc $HOME/.vimrc
+ln -s ${the_dir}/vim/nvim $HOME/.config/nvim
 
 
 if [ -f ~/.local/bin/vim ];then
@@ -70,14 +71,20 @@ else
 	fi
 fi
 
-if [ ! -f ~/.gitconfig ];then
-	mv ~/.gitconfig ~/.gitconfig_local
+# nvim LSP support
+# language server configuration
+pip install --upgrade 'python-language-server[all]'
+
+# git configs
+if [ -f ~/.gitconfig && ! -L ~/.gitconfig ];then
+	if [ ! -f ~/.gitconfig_local]; then
+		mv ~/.gitconfig ~/.gitconfig_local
+		ln -s ${the_dir}/git/gitconfig ~/.gitconfig
+	else
+		echo "~/.gitconfig to ~/.gitconfig_local failed"
+	fi
+else
 	ln -s ${the_dir}/git/gitconfig ~/.gitconfig
 fi
-
-# language server configuration
-pip install 'python-language-server[all]'
-
-# git ignore
 ln -s ${the_dir}/git/gitignore ~/.gitignore
 git config --global core.excludesFile ~/.gitignore
