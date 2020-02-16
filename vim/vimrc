@@ -13,9 +13,9 @@ if has('nvim')
 	Plug 'Shougo/denite.nvim'
 	Plug 'wellle/tmux-complete.vim'
 else
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
-	Plug 'Shougo/deoplete.nvim'
+	" Plug 'roxma/nvim-yarp'
+	" Plug 'roxma/vim-hug-neovim-rpc'
+	" Plug 'Shougo/deoplete.nvim'
 	Plug 'ctrlpvim/ctrlp.vim'
 endif
 " Git plugins
