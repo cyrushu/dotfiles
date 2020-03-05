@@ -16,6 +16,7 @@ vmap <C-b> mqI<Tab><ESC>`q
 "============== Deleting
 nnoremap x "_x
 vnoremap x "_x
+vnoremap p "_xP
 imap <C-BS> <C-W>
 
 "============== Searching
