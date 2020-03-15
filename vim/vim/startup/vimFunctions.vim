@@ -12,6 +12,11 @@ autocmd BufReadPost *
      " center buffer around cursor when opening files
 autocmd BufRead * normal zz
 
+function YankFunction()
+endf
+
+function PasteFunction()
+endf
 
 if !exists('*AddTitle')
     function AddTitle()

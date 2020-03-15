@@ -37,7 +37,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'Raimondi/delimitMate'
 
 " Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 " Plug 'vim-scripts/Conque-GDB', { 'for':'cpp' }
 
 
