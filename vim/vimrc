@@ -10,7 +10,7 @@ let g:ale_completion_enabled = 1
 call plug#begin('~/.vim_local/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'Shougo/denite.nvim'
+	Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } 
 	Plug 'wellle/tmux-complete.vim'
 else
 	Plug 'roxma/nvim-yarp'
@@ -46,7 +46,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for':'cpp'}
 " Python
 " Plug 'zchee/deoplete-jedi', {'for': 'python' }
 " Plug 'davidhalter/jedi-vim', { 'for':'python' }
-Plug 'heavenshell/vim-pydocstring', { 'for':'python' }
+" Plug 'nkakouros/vim-pydocstring', { 'for':'python' }
 "============== LanguageClient 
 
 " markdown
@@ -58,9 +58,8 @@ Plug 'lervag/vimtex',{'for':'latex' }
 " Clipboard
 Plug 'kana/vim-fakeclip'
 
+
 Plug 'SirVer/ultisnips'
-
-
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
@@ -109,6 +108,7 @@ endif
 source ~/.vim/startup/CommonKeymapping.vim
 source ~/.vim/startup/CommonSettings.vim
 source ~/.vim/startup/vimFunctions.vim
+source ~/.vim/startup/Plugins.vim
 
 "============== LanguageClient for custom settings
 " source ~/.vim/startup/LanguageClient.vim

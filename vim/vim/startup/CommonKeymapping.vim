@@ -78,11 +78,6 @@ nnoremap <C-F6> :call TitleDet()<cr>'s
 "========================Plugin keymapping=======================
 "================================================================
 
-"============== UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 
 "============== NERDTree keymapping
 no <C-\> :NERDTreeToggle<CR>
@@ -127,7 +122,7 @@ else
 endif
 
 "============== pydocstring
-nmap <silent> <F3> <Plug>(pydocstring)
+" nmap <silent> <F3> <Plug>(pydocstring)
 
 "============== vim-autoformat
 " noremap <F3> :Autoformat<CR>

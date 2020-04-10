@@ -57,15 +57,17 @@ if [ -f ~/.local/bin/vim ];then
 	echo "~/.local/bin/vim exists" 
 else
 	if [ "$machine" = "Linux" ]; then
-		curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-		chmod u+x nvim.appimage
-		mv nvim.appimage $HOME/.local/bin/vim
-		mkdir -p ~/.vim_local
+		curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -o /tmp/nvim.appimage
+		mkdir -p $HOME/.vim_local
+		chmod u+x /tmp/nvim.appimage
+		mv /tmp/nvim.appimage $HOME/.local/bin/vim
 		echo "let g:python3_host_prog = '$(which python3)'" >> ~/.vim_local/nvim_local.vim
 		pip3 install --user neovim
-		echo "let g:python_host_prog = '$(which python2)'" >> ~/.vim_local/nvim_local.vim
-		pip2 install --user neovim
-		vim +'PlugInstall --sync' +qa
+		# pip2 deprecated
+		# echo "let g:python_host_prog = '$(which python2)'" >> ~/.vim_local/nvim_local.vim
+		# pip2 install --user neovim
+		vim +'PlugUpgrade --sync' +qa
+		vim +'PlugUpdate --sync' +qa
 	else
 		echo "appimage is only working for Linux system, please find https://github.com/neovim/neovim/wiki/Installing-Neovim for Neovim installation" 
 	fi
@@ -73,11 +75,12 @@ fi
 
 # nvim LSP support
 # language server configuration
-pip install --upgrade 'python-language-server[all]'
+pip3 install --upgrade 'python-language-server[all]'
 
 # git configs
 if [ -f ~/.gitconfig && ! -L ~/.gitconfig ];then
-	if [ ! -f ~/.gitconfig_local]; then
+	if [ ! -f ~/.gitconfig_local ]; then
+		# global git ignore
 		mv ~/.gitconfig ~/.gitconfig_local
 		ln -s ${the_dir}/git/gitconfig ~/.gitconfig
 	else
