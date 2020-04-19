@@ -36,7 +36,6 @@ let g:indentLine_setColors = 0
 let g:indentLine_char = '|'
 
 "================== vimack
-"
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
@@ -132,5 +131,5 @@ endif
 
 
 "============== jedi-vim
-let g:jedi#completions_enabled = 0
+"let g:jedi#completions_enabled = 0
 

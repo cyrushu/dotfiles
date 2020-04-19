@@ -8,7 +8,7 @@ let g:ale_completion_enabled = 0
 " let g:ale_set_balloons = 1
 let g:ale_list_window_size = 5
 let g:ale_command_wrapper = 'nice -n5 %*'
-let b:ale_linters = {'python': ['pyls']}
+let b:ale_linters = {'python': ['pylint']}
 let g:ale_fixers = {'python': ['yapf']}
 
 "============== ale lint frequency
@@ -30,8 +30,9 @@ highlight ALEError ctermbg=none cterm=none
 highlight ALEWarning ctermbg=none cterm=none
 
 "============== python lint
-let b:ale_python_pyls_executable = '/home/yilang/software/anaconda3/bin/pyls'
-let b:ale_python_pyls_use_global = 1               
+" let b:ale_python_pyls_executable = '/home/yilang/software/anaconda3/bin/pyls'
+" let b:ale_python_pyls_use_global = 1               
+let b:ale_python_auto_pipenv = 0
 " let b:ale_python_pylint_executeable = '/home/yilang/software/anaconda3/bin/pylint'
 " let b:ale_python_pylint_use_global = 1               
 
