@@ -64,7 +64,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " rm
-Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'python-mode/python-mode'
 " Plug 'jalvesaq/Nvim-R'
 "

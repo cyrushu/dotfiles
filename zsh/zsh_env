@@ -96,4 +96,3 @@ autoload run-help-svk
 alias help=run-help
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
