@@ -62,7 +62,7 @@ else
 		chmod u+x /tmp/nvim.appimage
 		mv /tmp/nvim.appimage $HOME/.local/bin/vim
 		echo "let g:python3_host_prog = '$(which python3)'" >> ~/.vim_local/nvim_local.vim
-		pip3 install --user neovim
+		pip3 install --user pynvim
 		# pip2 deprecated
 		# echo "let g:python_host_prog = '$(which python2)'" >> ~/.vim_local/nvim_local.vim
 		# pip2 install --user neovim

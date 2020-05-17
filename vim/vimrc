@@ -63,11 +63,10 @@ Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
-" rm
+" File Searcher
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'python-mode/python-mode'
-" Plug 'jalvesaq/Nvim-R'
-"
+Plug 'airblade/vim-rooter'
+
 call plug#end()
 
 
@@ -79,11 +78,8 @@ call plug#end()
 " Plug 'Shougo/neosnippet-snippets'
 " tarbar
 " taglist
-" UltiSnips
-" delimitMate auto (){}""
 " TaskList
 " fugitive git-plugins
-" vim-surround parathensis plugins
 " tcomment_vim comment plugins
 
 
