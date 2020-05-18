@@ -133,3 +133,30 @@ endif
 "============== jedi-vim
 "let g:jedi#completions_enabled = 0
 
+"============== fzf
+
+
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_colors = { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+command! -bang -complete=dir -nargs=* LS
+    \ call fzf#run(fzf#wrap("ls",{'source': 'ls', 'dir': <q-args>}, <bang>0))
+
+command! -bang -nargs=* Rg
+  \ call fzf#run(fzf#wrap({"source":"rg --column --line-number --no-heading --color=always --smart-case ".fzf#shellescape(<q-args>),'options': '--ansi'}, <bang>0))
+
+
