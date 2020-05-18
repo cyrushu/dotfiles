@@ -13,9 +13,9 @@ if has('nvim')
 	Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } 
 	Plug 'wellle/tmux-complete.vim'
 else
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
-	Plug 'Shougo/deoplete.nvim'
+	" Plug 'roxma/nvim-yarp'
+	" Plug 'roxma/vim-hug-neovim-rpc'
+	" Plug 'Shougo/deoplete.nvim'
 	Plug 'ctrlpvim/ctrlp.vim'
 endif
 " Git plugins
@@ -63,11 +63,10 @@ Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
-" rm
-Plug 'junegunn/fzf', { 'do': './install --all' }
-" Plug 'python-mode/python-mode'
-" Plug 'jalvesaq/Nvim-R'
-"
+" File Searcher
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'airblade/vim-rooter'
+
 call plug#end()
 
 
@@ -79,11 +78,8 @@ call plug#end()
 " Plug 'Shougo/neosnippet-snippets'
 " tarbar
 " taglist
-" UltiSnips
-" delimitMate auto (){}""
 " TaskList
 " fugitive git-plugins
-" vim-surround parathensis plugins
 " tcomment_vim comment plugins
 
 

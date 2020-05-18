@@ -31,10 +31,6 @@ fi
 # export TERM="xterm-256color"
 export KEYTIMEOUT=1
 
-# the fuck
-eval $(thefuck --alias f)
-
-
 # zsh environment configure
 
 HISTFILE=~/.histfile
@@ -100,27 +96,3 @@ autoload run-help-svk
 alias help=run-help
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(pip python tmux thefuck)
-
-##########################
-# oh-my-zsh completion overwrited by antigen
-##########################
-# End of lines configured by zsh-newuser-install
-# Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.oh-my-zsh
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="random"
-# ZSH_THEME=rkj-repos
-# ZSH_THEME="agnoster"
-######## plugins #########
-# plugins=(pip python tmux thefuck)
-##########################

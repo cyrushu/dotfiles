@@ -3,4 +3,5 @@ chmod u+x /tmp/nvim.appimage
 mv /tmp/nvim.appimage $HOME/.local/bin/vim
 vim +'PlugUpgrade --sync' +qa
 vim +'PlugUpdate --sync' +qa
-pip install --upgrade neovim
+vim +'UpdateRemotePlugins' +qa
+pip install --upgrade --user "pynvim" "msgpack" "python-language-server[all]"
