@@ -5,7 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 call plug#begin('~/.vim_local/plugged')
 if has('nvim')
@@ -56,7 +56,8 @@ Plug 'shime/vim-livedown' ,{'for':'markdown'}
 Plug 'lervag/vimtex',{'for':'latex' }
 
 " Clipboard
-Plug 'kana/vim-fakeclip'
+" Plug 'kana/vim-fakeclip'
+Plug 'roxma/vim-tmux-clipboard'
 
 
 Plug 'SirVer/ultisnips'
@@ -65,7 +66,8 @@ Plug 'honza/vim-snippets'
 
 " File Searcher
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'airblade/vim-rooter'
+Plug 'junegunn/fzf.vim'
+" Plug 'airblade/vim-rooter'
 
 call plug#end()
 

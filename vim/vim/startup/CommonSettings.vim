@@ -153,10 +153,10 @@ let g:fzf_colors = { 'fg':      ['fg', 'Normal'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-command! -bang -complete=dir -nargs=* LS
-    \ call fzf#run(fzf#wrap("ls",{'source': 'ls', 'dir': <q-args>}, <bang>0))
+" command! -bang -complete=dir -nargs=* LS
+    " \ call fzf#run(fzf#wrap("ls",{'source': 'ls', 'dir': <q-args>}, <bang>0))
 
-command! -bang -nargs=* Rg
-  \ call fzf#run(fzf#wrap({"source":"rg --column --line-number --no-heading --color=always --smart-case ".fzf#shellescape(<q-args>),'options': '--ansi'}, <bang>0))
+" command! -bang -nargs=* Rg
+  " \ call fzf#run(fzf#wrap({"source":"rg --column --line-number --no-heading --color=always --smart-case ".fzf#shellescape(<q-args>),'options': '--ansi'}, <bang>0))
 
 

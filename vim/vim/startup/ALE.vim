@@ -4,7 +4,7 @@ let airline#extensions#ale#warning_symbol = 'W'
 
 "============== ale basic
 let g:ale_lint_on_enter = 0
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 " let g:ale_set_balloons = 1
 let g:ale_list_window_size = 5
 let g:ale_command_wrapper = 'nice -n5 %*'
@@ -32,7 +32,7 @@ highlight ALEWarning ctermbg=none cterm=none
 "============== python lint
 " put it into vim_local
 " let b:ale_python_pyls_executable = '/home/yilang/software/anaconda3/bin/pyls'
-let b:ale_python_pyls_use_global = 1               
+let b:ale_python_pyls_use_global = 0
 let b:ale_python_auto_pipenv = 0
 " let b:ale_python_pylint_executeable = '/home/yilang/software/anaconda3/bin/pylint'
 " let b:ale_python_pylint_use_global = 1               

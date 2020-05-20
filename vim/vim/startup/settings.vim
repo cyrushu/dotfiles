@@ -1,6 +1,6 @@
 set formatoptions-=cro
-set clipboard=unnamed
-set history =50
+" set clipboard=unnamed
+" set history =50
 set ruler
 set incsearch
 set showcmd
