@@ -21,6 +21,6 @@ There are configurations listed:
 	- nvim -> ~/.config/nvim
 
 3. tmux
-	softlink the tmux folder items( tmux.conf, tmux ) into ~/
-	curl  https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf -o ~/.tmux.conf
+	- softlink the tmux folder items( tmux.conf, tmux ) into ~/
+	- curl  https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf -o ~/.tmux.conf
 	- tmux.conf -> ~/.tmux.conf.local
