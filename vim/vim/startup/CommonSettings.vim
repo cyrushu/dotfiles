@@ -65,16 +65,6 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
-"============== ctrlp
-" let g:ctrlp_working_path_mode = 'ra'
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-" let g:ctrlp_custom_ignore = {
-  " \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  " \ 'file': '\v\.(exe|so|dll|pdf|desktop|mp3)$',
-  " \ 'link': 'some_bad_symbolic_links',
-  " \ }
-
 "============== denite
 "
 if has('nvim')
@@ -130,12 +120,8 @@ if !has('nvim')
 endif
 
 
-"============== jedi-vim
-"let g:jedi#completions_enabled = 0
 
 "============== fzf
-
-
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'

@@ -11,11 +11,7 @@ call plug#begin('~/.vim_local/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } 
-	Plug 'wellle/tmux-complete.vim'
 else
-	" Plug 'roxma/nvim-yarp'
-	" Plug 'roxma/vim-hug-neovim-rpc'
-	" Plug 'Shougo/deoplete.nvim'
 	Plug 'ctrlpvim/ctrlp.vim'
 endif
 " Git plugins
@@ -36,7 +32,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/seoul256.vim'
 Plug 'Raimondi/delimitMate'
 
-" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'dense-analysis/ale'
 " Plug 'vim-scripts/Conque-GDB', { 'for':'cpp' }
 
@@ -44,9 +39,7 @@ Plug 'dense-analysis/ale'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for':'cpp'}
 "============== LanguageClient may replace all of following plugins
 " Python
-" Plug 'zchee/deoplete-jedi', {'for': 'python' }
-" Plug 'davidhalter/jedi-vim', { 'for':'python' }
-" Plug 'nkakouros/vim-pydocstring', { 'for':'python' }
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 "============== LanguageClient 
 
 " markdown
@@ -56,8 +49,8 @@ Plug 'shime/vim-livedown' ,{'for':'markdown'}
 Plug 'lervag/vimtex',{'for':'latex' }
 
 " Clipboard
-" Plug 'kana/vim-fakeclip'
 Plug 'roxma/vim-tmux-clipboard'
+Plug 'wellle/tmux-complete.vim'
 
 
 Plug 'SirVer/ultisnips'
@@ -67,7 +60,6 @@ Plug 'honza/vim-snippets'
 " File Searcher
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'airblade/vim-rooter'
 
 call plug#end()
 

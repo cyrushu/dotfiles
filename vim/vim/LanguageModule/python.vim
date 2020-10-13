@@ -14,5 +14,8 @@ let b:ale_python_auto_pipenv = 0
 set completeopt+=noinsert
 " let b:ale_python_pylint_executeable = '/home/yilang/software/anaconda3/bin/pylint'
 " let b:ale_python_pylint_use_global = 1               
+"
+"============== pydocstring
+nmap <silent> <F3> <Plug>(pydocstring)
 
 autocmd FileType python nmap gf :ALEGoToDefinition<CR>

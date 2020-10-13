@@ -103,12 +103,6 @@ map <C-f> <Plug>(easymotion-bd-f)
 nmap <leader>a :tab split<CR>:Ack ""<Left>
 nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
-
-"============== ctrlp
-" let g:ctrlp_map = '<c-p>'
-" nmap <leader>p :CtrlP<CR>
-
-
 "============== nerdcommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -121,8 +115,4 @@ else
   " imap <C-_> <C-[><leader>c<Space>
 endif
 
-"============== pydocstring
-" nmap <silent> <F3> <Plug>(pydocstring)
 
-"============== vim-autoformat
-" noremap <F3> :Autoformat<CR>
