@@ -16,7 +16,7 @@ vmap <C-b> mqI<Tab><ESC>`q
 "============== Deleting
 nnoremap x "_x
 vnoremap x "_x
-vnoremap p "_xP
+" vnoremap p "_xP
 imap <C-BS> <C-W>
 
 "============== Searching
@@ -55,7 +55,6 @@ nnoremap <Tab> za
 
 
 "============= quick pairs
-" nmap <C-/> I#<ESC>
 "########################replace it by Tcomment or nerdcommenter
 
 
