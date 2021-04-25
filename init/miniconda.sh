@@ -11,4 +11,6 @@ $CONDA_DIR/bin/conda init zsh &&\
 $CONDA_DIR/bin/conda update --all -y &&\
 $CONDA_DIR/bin/conda install conda-build
 
-cp $THEDIR $CONDA_DIR/condarc
+cp $THEDIR/condarc $CONDA_DIR/condarc
+mkdir -p $HOME/.pip && \
+	cp $THEDIR/pip.conf $HOME/.pip/
