@@ -3,5 +3,8 @@
 [pager]
 	branch = false
 [core]
-	excludesFile = ~/.gitignore
+	excludesFile = /home/yilang/.gitignore
 	pager = cat
+[user]
+	email = yilang.hu@outlook.com
+	name = Yilang Hu
