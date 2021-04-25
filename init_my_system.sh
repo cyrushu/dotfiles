@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # find the OS you are working on
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -11,6 +10,12 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 echo "current machine is ${machine}"
+
+if [ $(lsb_release -s -i) == "Ubuntu" ];
+then
+	apt install powerline-gitstatus
+fi
+
 
 the_dir=$(dirname $(pwd)/$0)
 
