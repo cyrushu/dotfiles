@@ -4,7 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab 
-let g:pydocstring_doq_path = '/home/yilang/software/anaconda3/bin/doq'
+let g:pydocstring_doq_path = '/home/yilang/software/miniconda3/bin/doq'
 
 " put it into vim_local
 " let b:ale_python_pyls_executable = '/home/yilang/software/anaconda3/bin/pyls'

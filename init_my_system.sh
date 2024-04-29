@@ -13,17 +13,17 @@ echo "current machine is ${machine}"
 
 if [ $(lsb_release -s -i) == "Ubuntu" ];
 then
-	apt install powerline-gitstatus
+	apt install powerline-gitstatus libfuse2
 fi
 
 
-the_dir=$(dirname $(pwd)/$0)
+DOTDIR=$(dirname $(pwd)/$0)
 
 # zsh
 if [ ! -f ~/.zshrc ];then
-	ln -s ${the_dir}/zsh/zshrc ~/.zshrc
-	ln -s ${the_dir}/zsh/zsh_env ~/.zsh_env
-	ln -s ${the_dir}/zsh/antigenrc ~/.antigenrc
+	ln -s ${DOTDIR}/zsh/zshrc ~/.zshrc
+	ln -s ${DOTDIR}/zsh/zsh_env ~/.zsh_env
+	ln -s ${DOTDIR}/zsh/antigenrc ~/.antigenrc
 else
 	echo "zshrc exists already"
 fi
@@ -38,7 +38,7 @@ fi
 # tmux
 if [ ! -f ~/.tmux.conf ];then
 	curl -L https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf -o ~/.tmux.conf
-	ln -s ${the_dir}/tmux/tmux.conf ~/.tmux.conf.local
+	ln -s ${DOTDIR}/tmux/tmux.conf ~/.tmux.conf.local
 	mkdir -p ~/.tmux/plugins
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 else
@@ -48,14 +48,11 @@ fi
 
 # vim & neovim
 # vim 
-mkdir -p ~/.vimtmp
-mkdir -p ~/.vimswap
-mkdir -p ~/.vimundo
 mkdir -p ~/.config
 mkdir -p ~/.local/bin
-ln -s ${the_dir}/vim/vim/ $HOME/.vim
-ln -s ${the_dir}/vim/vimrc $HOME/.vimrc
-ln -s ${the_dir}/vim/nvim $HOME/.config/nvim
+ln -s ${DOTDIR}/vim/vim/ $HOME/.vim
+ln -s ${DOTDIR}/vim/vimrc $HOME/.vimrc
+ln -s ${DOTDIR}/vim/nvim $HOME/.config/nvim
 
 
 if [ -f ~/.local/bin/vim ];then
@@ -63,36 +60,29 @@ if [ -f ~/.local/bin/vim ];then
 else
 	if [ "$machine" = "Linux" ]; then
 		curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -o /tmp/nvim.appimage
-		mkdir -p $HOME/.vim_local
 		chmod u+x /tmp/nvim.appimage
 		mv /tmp/nvim.appimage $HOME/.local/bin/vim
-		echo "let g:python3_host_prog = '$(which python3)'" >> ~/.vim_local/nvim_local.vim
 		pip3 install --user pynvim
-		# pip2 deprecated
-		# echo "let g:python_host_prog = '$(which python2)'" >> ~/.vim_local/nvim_local.vim
-		# pip2 install --user neovim
-		vim +'PlugUpgrade --sync' +qa
-		vim +'PlugUpdate --sync' +qa
+		# nvim LSP support
+		# language server configuration 
+		pip3 install --upgrade 'python-language-server[all]'
 	else
 		echo "appimage is only working for Linux system, please find https://github.com/neovim/neovim/wiki/Installing-Neovim for Neovim installation" 
 	fi
 fi
 
-# nvim LSP support
-# language server configuration
-pip3 install --upgrade 'python-language-server[all]'
 
 # git configs
 if [ -f ~/.gitconfig && ! -L ~/.gitconfig ];then
 	if [ ! -f ~/.gitconfig_local ]; then
 		# global git ignore
 		mv ~/.gitconfig ~/.gitconfig_local
-		ln -s ${the_dir}/git/gitconfig ~/.gitconfig
+		ln -s ${DOTDIR}/git/gitconfig ~/.gitconfig
 	else
 		echo "~/.gitconfig to ~/.gitconfig_local failed"
 	fi
 else
-	ln -s ${the_dir}/git/gitconfig ~/.gitconfig
+	ln -s ${DOTDIR}/git/gitconfig ~/.gitconfig
 fi
-ln -s ${the_dir}/git/gitignore ~/.gitignore
+ln -s ${DOTDIR}/git/gitignore ~/.gitignore
 git config --global core.excludesFile ~/.gitignore
